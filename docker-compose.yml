@@ -1,0 +1,10 @@
+app:
+  build: .
+  command: /bin/bash
+  volumes:
+    - ./shared:/home/shared
+    - /dev/bus/usb:/dev/bus/usb
+  working_dir: /home/shared
+  privileged: true
+  cpuset: "0"
+
